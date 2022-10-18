@@ -1,8 +1,11 @@
 const dataSkills = ["JavaScript", "Angular", "Java", "Spring Boot"]
 
 function clicked() {
-    for (let i = 0; i < dataSkills.length; i++) {
-        skills.appendChild(inputData(dataSkills[i]))
+    if (document.getElementsByTagName('li').length != dataSkills.length) {
+
+        for (let i = 0; i < dataSkills.length; i++) {
+            skills.appendChild(inputData(dataSkills[i]))
+        }
     }
 }
 const skills = document.querySelector("#skill")
